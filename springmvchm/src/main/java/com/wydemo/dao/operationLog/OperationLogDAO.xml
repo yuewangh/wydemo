@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lqbw.dao.operationLog.OperationLogDAO" >
+	 <resultMap id="operationLog" type="com.lqbw.operation_log.annotation.mapping.OperationLog">
+    </resultMap> 
+    <insert id="saveLog" parameterType="com.lqbw.operation_log.annotation.mapping.OperationLog">
+        insert into t_operate_log (type, content, operation_time, successed, user_id, details, b_id)
+        values (#{type}, #{content}, #{operationTime}, #{successed}, #{userId}, #{details}, #{bId})
+    </insert>
+     <select id="findBybId" resultMap="operationLog"  parameterType="String">
+        select id,type,content,operation_time operationTime,successed, user_id userId, details, b_id from t_operate_log where b_id= #{bId}
+        order by operation_time
+    </select>
+</mapper>

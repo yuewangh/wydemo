@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lqbw.dao.student.StudentDao">
+	<resultMap id="student" type="com.lqbw.model.student.Student"></resultMap>
+
+	<!-- 新增 -->
+	<insert id="insert" parameterType="com.lqbw.model.student.Student">
+		insert into t_student(id,name,sex,xueli,phone,id_code,father_name,father_phone,adress,state,create_date,update_date,create_user,update_user,born_time,qq,gaozhong,daxue,yixzy,zxls,beizhu)
+		values(#{id},#{name},#{sex},#{xueli},#{phone},#{id_code},#{father_name},#{father_phone},#{adress},#{state},#{create_date},#{update_date},#{create_user},#{update_user},#{born_time},#{qq},#{gaozhong},#{daxue},#{yixzy},#{zxls},#{beizhu})
+	</insert>
+
+	<!-- 修改 -->
+	<update id="update" parameterType="com.lqbw.model.student.Student">
+		update t_student set id=#{id},name=#{name},sex=#{sex},xueli=#{xueli},phone=#{phone},id_code=#{id_code},father_name=#{father_name},father_phone=#{father_phone},adress=#{adress},state=#{state},create_date=#{create_date},update_date=#{update_date},create_user=#{create_user},update_user=#{update_user},born_time=#{born_time},qq=#{qq},gaozhong=#{gaozhong},daxue=#{daxue},yixzy=#{yixzy},zxls=#{zxls},beizhu=#{beizhu}
+		where id = #{id}
+	</update>
+
+	<!-- 删除 -->
+	<delete id="delete" parameterType="String">
+		delete from t_student where id=#{id}
+	</delete>
+
+	<!-- 根据id查询单条-->
+	<select id="getById" resultMap="student" parameterType="String">
+		select id,name,sex,xueli,phone,id_code,father_name,father_phone,adress,state,create_date,update_date,create_user,update_user,born_time,qq,gaozhong,daxue,yixzy,zxls,beizhu from t_student
+		where id = #{id}
+	</select>
+
+	<!-- 分页查询列表-->
+	<select id="getAllList" resultMap="student" parameterType="com.lqbw.model.student.Student">
+		select id,name,sex,xueli,phone,id_code,father_name,father_phone,adress,state,create_date,update_date,create_user,update_user,born_time,qq,gaozhong,daxue,yixzy,zxls,beizhu from t_student
+		limit #{startPos},#{pageSize}
+	</select>
+
+	<!-- 分页查询数量-->
+	<select id="getCount" resultType="int" parameterType="com.lqbw.model.student.Student">
+		select count(1) from t_student
+	</select>
+
+</mapper>

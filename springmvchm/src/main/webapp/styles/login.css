@@ -1,0 +1,44 @@
+*{ margin:0; padding:0; border:0;}
+body{ color:#333; font-family:Microsoft Yahei; font-size:12px }
+ul,li{ list-style-type:none}
+a{ color:#007aff; text-decoration:none; font-size:12px; outline:none}
+
+table {font-size:inherit;font:100%;}
+th { font-weight:normal;}
+img { border: 0;}
+
+
+.clear { clear: both; height:0; line-height:0;}
+
+.top{ height:104px; background:#5d99da;}
+.topbk{ width:930px; margin:0 auto;}
+.topbk span{ float:right; color:#fff; font-size:16px; padding-top:60px; padding-right:20px;}
+.content{ background:url(../images/bg.jpg) no-repeat left 0px;  height:530px; width:930px; margin:0 auto;}
+
+.login{ width:346px; float: right; padding-top:10px;}
+.login_head ul li{ float:left;}
+.login_head ul li a{ display:block; width:173px; height:48px;}
+
+.normal { background:url(../images/normal.png) no-repeat;width:173px; height:48px;}
+.normalhov { background:url(../images/normalhover.png) no-repeat;width:173px; height:48px;}
+.ukey { background:url(../images/Ukey.png) no-repeat;width:173px; height:48px;}
+.ukeyhov{ background:url(../images/Ukeyhover.png) no-repeat;width:173px; height:48px;}
+
+
+
+.login_list{ background:url(../images/bg_login.png); padding:20px 0;}
+.login_input{ background:url(../images/input.png); width:240px; height:29px; padding:5px 10px; font-size:18px; color:#666; font-weight:bold; line-height:29px;}
+
+.login_action{ background:url(../images/action_input.png); width:107px; height:30px; padding:5px 5px 5px 5px; font-size:14px; color:#333;font-family:Microsoft Yahei; }
+.login_enter{ background:url(../images/login.png); display:block; width:159px; height:40px}
+.login_enter:hover{ background:url(../images/loginhover.png)}
+.login_enter1{ background:url(../images/login1.png); display:block; width:159px; height:40px}
+.login_enter1:hover{ background:url(../images/loginhover1.jpg);width:159px; height:40px;display:block; }
+.login_tab{ margin:0 40px;}
+.act{ display: block; background:url(../images/action_input.png); width:71px; height:19px; padding:10px 1px;}
+.notice{ line-height:20px;color:333333; height:305px; overflow:hidden; width:274px; margin:0 auto;}
+.notice h4{ font-size:14px}
+.login_bottom{ background:url(../images/bottom.png); height:44px; color:#007AFF; text-align:center; line-height:40px;}
+.count{ position: absolute; right:20px; top:5px; color: #fff;}
+.alert_ie8{ position: absolute; top:200px; left:50%; margin-left: -400px; z-index: 100; border:1px solid #8d721e; padding-left:45px; width:400px; line-height:30px; height:30px; background:url(../images/alertie8.png) 20px no-repeat #f4edd3}
+.alert_ie8 h2{ font-size: 12px;}

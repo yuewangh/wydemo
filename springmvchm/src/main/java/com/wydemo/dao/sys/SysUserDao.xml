@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lqbw.dao.sys.SysUserDao">
+	<resultMap id="sysUser" type="com.lqbw.model.sys.SysUser"></resultMap>
+
+	<!-- 新增 -->
+	<insert id="insert" parameterType="com.lqbw.model.sys.SysUser">
+		insert into t_user(id,user_name,password,name,phone,create_time,type)
+		values(#{id},#{user_name},#{password},#{name},#{phone},#{create_time},#{type})
+	</insert>
+
+	<!-- 修改 -->
+	<update id="update" parameterType="com.lqbw.model.sys.SysUser">
+		update t_user set id=#{id},user_name=#{user_name},password=#{password},name=#{name},phone=#{phone},create_time=#{create_time},type=#{type}
+		where id = #{id}
+	</update>
+
+	<!-- 删除 -->
+	<delete id="delete" parameterType="String">
+		delete from t_user where id=#{id}
+	</delete>
+
+	<!-- 根据id查询单条-->
+	<select id="getById" resultMap="sysUser" parameterType="String">
+		select id,user_name,password,name,phone,create_time,type from t_user
+		where id = #{id}
+	</select>
+	<!-- 根据id查询单条-->
+	<select id="getByName" resultMap="sysUser" parameterType="String">
+		select id,user_name,password,name,phone,create_time,type from t_user
+		where user_name = #{user_name}
+	</select>
+
+	<!-- 分页查询列表-->
+	<select id="getAllList" resultMap="sysUser" parameterType="com.lqbw.model.sys.SysUser">
+		select id,user_name,password,name,phone,create_time,type from t_user
+		limit #{startPos},#{pageSize}
+	</select>
+
+	<!-- 分页查询数量-->
+	<select id="getCount" resultType="int" parameterType="com.lqbw.model.sys.SysUser">
+		select count(1) from t_user
+	</select>
+
+</mapper>
