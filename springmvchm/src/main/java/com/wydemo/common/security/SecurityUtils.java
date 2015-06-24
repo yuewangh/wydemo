@@ -1,13 +1,13 @@
 /**
  * 
  */
-package com.lqbw.common.security;
+package com.wydemo.common.security;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 
-import com.lqbw.model.sys.SysUser;
+import com.wydemo.model.sys.SysUser;
 
 
 /**

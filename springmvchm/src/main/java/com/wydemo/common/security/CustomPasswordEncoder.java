@@ -1,4 +1,4 @@
-package com.lqbw.common.security;
+package com.wydemo.common.security;
 
 import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
 

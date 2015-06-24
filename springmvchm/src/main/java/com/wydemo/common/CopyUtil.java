@@ -1,4 +1,4 @@
-package com.lqbw.common;
+package com.wydemo.common;
 
 import java.beans.BeanInfo;
 import java.beans.Introspector;
@@ -6,7 +6,7 @@ import java.beans.PropertyDescriptor;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
-import com.lqbw.model.student.Student;
+import com.wydemo.model.student.Student;
 
 
 public class CopyUtil {
