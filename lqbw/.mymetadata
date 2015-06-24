@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="lqbw"
+  id="myeclipse.1377091899026"
+  context-root="/lqbw"
+  j2ee-spec="6.0"
+  archive="lqbw.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+
